@@ -56,14 +56,14 @@ html {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #181C14;
+  --primary: #222831;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #3C3D37;
+  --secondary: #1f2933;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: #697565;
-  --hover: #ECDFCC;
+  --accent: #16C47F;
+  --hover: #ffffff;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
