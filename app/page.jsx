@@ -9,14 +9,13 @@ import Loop from "@/components/Loop";
 import {
   Popover,
   PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
+import MusicPlayer from "@/components/AudioPlay";
 
 
 export default function Home() {
+  
   const AnimatedContent = dynamic(
     () => import("@/components/AnimatedContent"),
     { ssr: false },
@@ -26,42 +25,47 @@ export default function Home() {
     {
       id: 1,
       title: "Web Perpustakaan Sims",
-      description: "Web Peminjaman buku sederhana menggunakan React untuk frontend dan menggunakan MySQL Sebagai Database. Fitur termasuk autentikasi pengguna, manajemen koleksi buku, dan sistem peminjaman.",
+      description:
+        "Web Peminjaman buku sederhana menggunakan React untuk frontend dan menggunakan MySQL Sebagai Database. Fitur termasuk autentikasi pengguna, manajemen koleksi buku, dan sistem peminjaman.",
       image: "/images/perpus.png",
       link: "https://github.com/galihpikun/Projek-AAS-Kelas-11-Perpustakaan-Sekolah",
-      tags: ["Next.Js", "MySql2", "NextAuth"]
+      tags: ["Next.Js", "MySql2", "NextAuth"],
     },
     {
       id: 2,
       title: "Cashbhak ( Web Kasir Online )",
-      description: "Sebuah Web yang berfungsi sebagai kasir, Web ini bisa menyimpan dan mendata produk yang anda jual. Selain itu akan ada analisis penjualan seperti grafik, piechart bahkan history penjualan.",
+      description:
+        "Sebuah Web yang berfungsi sebagai kasir, Web ini bisa menyimpan dan mendata produk yang anda jual. Selain itu akan ada analisis penjualan seperti grafik, piechart bahkan history penjualan.",
       image: "/images/cashbhak.png",
       link: "https://github.com/RezaAdityaRamadhan26/CashBhak",
-      tags: ["Next.Js", "MySql2", "NextAuth"]
+      tags: ["Next.Js", "MySql2", "NextAuth"],
     },
     {
       id: 3,
       title: "Web Laporan Masyarakat",
-      description: "Sebuah web yang berfungsi untuk menampung laporan masyarakat. Web ini memiliki admin yang bakal mengatur jalan kerja laporan masyarakat. Selain itu web ini memilki fitur komen untuk diskusi.",
+      description:
+        "Sebuah web yang berfungsi untuk menampung laporan masyarakat. Web ini memiliki admin yang bakal mengatur jalan kerja laporan masyarakat. Selain itu web ini memilki fitur komen untuk diskusi.",
       image: "/images/komune.png",
       link: "https://github.com/galihpikun/komune-fe",
-      tags: ["Next.Js", "Express.Js", "MySql2"]
+      tags: ["Next.Js", "Express.Js", "MySql2"],
     },
     {
       id: 4,
       title: "Food Rescue",
-      description: "Sebuah web yang berfungsi sebagai sarana penjual untuk menjual makanan yang sudah tidak layak jual, tetapi masih layak konsumsi. Web ini memiliki fitur untuk menampilkan produk yang dijual, dan juga fitur untuk menambahkan produk baru.",
+      description:
+        "Sebuah web yang berfungsi sebagai sarana penjual untuk menjual makanan yang sudah tidak layak jual, tetapi masih layak konsumsi. Web ini memiliki fitur untuk menampilkan produk yang dijual, dan juga fitur untuk menambahkan produk baru.",
       image: "/images/komune.png",
       link: "https://github.com/RezaAdityaRamadhan26/food-rescue-fe",
-      tags: ["Next.Js", "Express.Js", "Prisma"]
+      tags: ["Next.Js", "Express.Js", "Prisma"],
     },
     {
       id: 5,
       title: "SnipSnip (Web Snippet)",
-      description: "Sebuah web yang berfungsi untuk menyimpan dan berbagi snippet kode. Di website ini anda dapat menyimpan rangkaian kode yang anda buat dan membagikannya kepada orang lain.",
+      description:
+        "Sebuah web yang berfungsi untuk menyimpan dan berbagi snippet kode. Di website ini anda dapat menyimpan rangkaian kode yang anda buat dan membagikannya kepada orang lain.",
       image: "/images/komune.png",
       link: "https://github.com/galihpikun/SnipSnip",
-      tags: ["Next.Js", "Express.Js", "Prisma"]
+      tags: ["Next.Js", "Express.Js", "Prisma"],
     },
   ];
 
@@ -111,15 +115,13 @@ export default function Home() {
   ];
 
   return (
-    <div
-      className="bg-linear-to-br from-[#0f172a] via-[#1e293b] to-[#020617] flex flex-col w-full h-full gap-40 md:gap-30 text-hover overflow-x-hidden">
-      
+    <div className="bg-linear-to-br from-[#0f172a] via-[#1e293b] to-[#020617] flex flex-col w-full h-full gap-40 md:gap-30 text-hover overflow-x-hidden">
       {/* NAVBAR */}
       <nav
         className="fixed top-0 left-0 w-full h-20 bg-secondary/40 backdrop-blur-md z-50 backdrop-saturate-150 flex justify-between lg:justify-around items-center px-6 md:px-12 lg:px-0 text-hover"
         suppressHydrationWarning>
         <h1 className="text-xl md:text-2xl font-light italic">glihrakha</h1>
-        
+
         {/* Nav Links - Menyembunyikan di HP kecil atau membiarkannya scrollable horizontal agar tidak merusak layout */}
         <div className="hidden md:flex text-accent gap-4 lg:gap-8 items-center text-sm lg:text-base">
           <a
@@ -148,7 +150,7 @@ export default function Home() {
             Certificates
           </a>
         </div>
-        
+
         <a
           href="#contact"
           className="bg-accent px-4 py-2 rounded-full text-hover font-semibold hover:bg-hover hover:text-accent transition-all duration-300 hover:scale-105 text-sm md:text-base">
@@ -175,13 +177,12 @@ export default function Home() {
             <span className="font-bold">Engineer</span>
           </h1>
           <div className="flex flex-col items-center lg:items-end gap-5 w-full lg:w-auto">
-            <div className="w-50 h-80 rounded-xl overflow-hidden bg-gray-500 group">
-              <img
-                className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
-                src="/images/ross.jpeg"
-                alt="Ross"
-              />
-            </div>
+            <img
+              className="rounded-xl overflow-hidden bg-gray-500 w-50 h-80 object-cover transition-all duration-300 hover:w-full hover:h-100"
+              src="/images/ross.jpeg"
+              alt="Ross"
+            />
+
             <h1 className="w-full max-w-xs text-center lg:text-right font-medium text-base">
               Hi there! Need a{" "}
               <span className="text-accent">Software Engineer</span> for your
@@ -207,7 +208,9 @@ export default function Home() {
         scale={1}
         threshold={0.1}
         delay={0}>
-        <section className="px-6 md:px-16 lg:px-20 py-8 flex flex-col-reverse lg:flex-row justify-around items-center gap-10 lg:gap-16 max-w-7xl mx-auto" id="about">
+        <section
+          className="px-6 md:px-16 lg:px-20 py-8 flex flex-col-reverse lg:flex-row justify-around items-center gap-10 lg:gap-16 max-w-7xl mx-auto"
+          id="about">
           {/* Teks Deskripsi */}
           <div className="flex flex-col gap-4 w-full lg:max-w-3xl">
             <h1 className="text-accent bg-accent/10 border border-accent/20 px-4 py-1.5 rounded-full w-fit text-sm font-semibold tracking-wide uppercase">
@@ -238,9 +241,9 @@ export default function Home() {
           </div>
 
           {/* Foto Profil */}
-          <div className="flex-shrink-0 relative">
+          <div className="shrink-0 relative">
             <img
-              className="w-[260px] h-[260px] md:w-[350px] md:h-[350px] rounded-full object-cover border-4 border-accent/30 shadow-accent shadow-[0_0_20px_rgba(var(--color-accent),0.2)] rotate-25 hover:scale-110 transition-all duration-500 hover:rotate-0 hover:shadow-2xl hover:shadow-accent/40 hover:border-accent"
+              className="w-[260px] h-[260px] md:w-[350px] md:h-[350px] rounded-full object-cover border-4 border-accent/30 shadow-accent shadow-[0_0_20px_rgba(var(--color-accent),0.2)] rotate-25 hover:scale-110 transition-all duration-500 hover:rotate-0 hover:shadow-2xl hover:shadow-accent/40 hover:border-accent md:blur-sm hover:blur-none"
               src="/images/lubac.jpeg"
               alt="Galih Rakhasiwi"
             />
@@ -259,12 +262,10 @@ export default function Home() {
         animateOpacity
         scale={1}
         threshold={0.1}
-        delay={0}
-      >
+        delay={0}>
         <section
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#0d1527]/60 backdrop-blur-md p-6 md:p-12 lg:p-20 gap-6 md:gap-8 mx-4 md:mx-12 lg:mx-20 rounded-3xl md:rounded-4xl border border-white/5 shadow-2xl shadow-black/40"
-          id="skills"
-        >
+          id="skills">
           {/* Header Card / Title Area */}
           <div className="flex flex-col justify-center pr-4 mb-4 lg:mb-0">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-none">
@@ -284,11 +285,15 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-white tracking-wide border-b-2 border-accent/70 pb-1 w-fit">
                 Web Development
               </h1>
-              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">01</span>
+              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">
+                01
+              </span>
             </div>
             <p className="text-gray-400 text-[15px] leading-relaxed font-light mt-2 group-hover:text-gray-300 transition-colors duration-300">
               I've learned the fundamentals of making a website, from back-end
-              to front-end. Not only that, I can use <span className="text-white font-normal">React</span>, <span className="text-white font-normal">Express</span>, and even
+              to front-end. Not only that, I can use{" "}
+              <span className="text-white font-normal">React</span>,{" "}
+              <span className="text-white font-normal">Express</span>, and even
               <span className="text-white font-normal"> Go-Lang</span>.
             </p>
           </div>
@@ -299,12 +304,15 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-white tracking-wide border-b-2 border-accent/70 pb-1 w-fit">
                 UI/UX Design
               </h1>
-              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">02</span>
+              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">
+                02
+              </span>
             </div>
             <p className="text-gray-400 text-[15px] leading-relaxed font-light mt-2 group-hover:text-gray-300 transition-colors duration-300">
-              I've used <span className="text-white font-normal">Figma</span> for quite some time now for every project I've
-              done, so it's safe to say I know how to design a great website.
-              Although if you think otherwise, I'm still developing.
+              I've used <span className="text-white font-normal">Figma</span>{" "}
+              for quite some time now for every project I've done, so it's safe
+              to say I know how to design a great website. Although if you think
+              otherwise, I'm still developing.
             </p>
           </div>
 
@@ -314,11 +322,15 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-white tracking-wide border-b-2 border-accent/70 pb-1 w-fit">
                 Mobile Development
               </h1>
-              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">03</span>
+              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">
+                03
+              </span>
             </div>
             <p className="text-gray-400 text-[15px] leading-relaxed font-light mt-2 group-hover:text-gray-300 transition-colors duration-300">
               I’ve learned the basics and necessities of Mobile Development. For
-              the tools, I usually use <span className="text-white font-normal">React Expo</span>, but I can do a little bit of
+              the tools, I usually use{" "}
+              <span className="text-white font-normal">React Expo</span>, but I
+              can do a little bit of
               <span className="text-white font-normal"> Flutter</span> too.
             </p>
           </div>
@@ -329,12 +341,15 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-white tracking-wide border-b-2 border-accent/70 pb-1 w-fit">
                 Database Management
               </h1>
-              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">04</span>
+              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">
+                04
+              </span>
             </div>
             <p className="text-gray-400 text-[15px] leading-relaxed font-light mt-2 group-hover:text-gray-300 transition-colors duration-300">
               I've learned the basics of Database Management, such as Data
               Definition and Data Manipulation Language. I've managed those data
-              with <span className="text-white font-normal">MySQL</span> and <span className="text-white font-normal">PostgreSQL</span>.
+              with <span className="text-white font-normal">MySQL</span> and{" "}
+              <span className="text-white font-normal">PostgreSQL</span>.
             </p>
           </div>
 
@@ -344,12 +359,15 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-white tracking-wide border-b-2 border-accent/70 pb-1 w-fit">
                 General Knowledge
               </h1>
-              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">05</span>
+              <span className="text-xs font-mono text-accent/50 group-hover:text-accent transition-colors duration-300">
+                05
+              </span>
             </div>
             <p className="text-gray-400 text-[15px] leading-relaxed font-light mt-2 group-hover:text-gray-300 transition-colors duration-300">
               I graduated from school with pretty good grades. Whether it's
-              Bahasa Indonesia, History, or even Math, I can do it. But really, I
-              excel the most at <span className="text-accent font-medium">English</span>.
+              Bahasa Indonesia, History, or even Math, I can do it. But really,
+              I excel the most at{" "}
+              <span className="text-accent font-medium">English</span>.
             </p>
           </div>
         </section>
@@ -367,7 +385,9 @@ export default function Home() {
         scale={1}
         threshold={0.1}
         delay={0}>
-        <section className="px-6 md:px-16 lg:px-20 flex flex-col gap-10" id="projects">
+        <section
+          className="px-6 md:px-16 lg:px-20 flex flex-col gap-10"
+          id="projects">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <p className="text-base md:text-lg border-b-4 pb-1 border-accent text-white/90">
               The projects i've done <br />
@@ -385,8 +405,7 @@ export default function Home() {
                 key={project.id}
                 href={project.link}
                 target="_blank"
-                className="group relative block w-full sm:w-[400px] h-[250px] rounded-2xl overflow-hidden bg-black cursor-pointer"
-              >
+                className="group relative block w-full sm:w-[400px] h-[250px] rounded-2xl overflow-hidden bg-black cursor-pointer">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -401,7 +420,9 @@ export default function Home() {
                   </p>
                   <div className="flex gap-2 mt-3 text-xs text-white">
                     {project.tags.map((tag, index) => (
-                      <span key={index} className="px-2 py-1 bg-white/10 rounded-full">
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-white/10 rounded-full">
                         {tag}
                       </span>
                     ))}
@@ -428,8 +449,7 @@ export default function Home() {
         scale={1}
         threshold={0.1}
         delay={0}
-        className="px-6 md:px-16 lg:px-20 flex flex-col gap-10"
-      >
+        className="px-6 md:px-16 lg:px-20 flex flex-col gap-10">
         <section className="flex flex-col gap-12 w-full" id="sertifikat">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <h1 className="text-5xl md:text-6xl">
@@ -446,8 +466,7 @@ export default function Home() {
             {sertifikat.map((sertif) => (
               <div
                 className="group rounded-2xl p-6 bg-linear-to-br from-[#353c4d] via-[#283441] to-[#2a2f36] border border-white/10 hover:shadow-xl hover:shadow-accent transition-all duration-300 hover:-translate-y-2"
-                key={sertif.id}
-              >
+                key={sertif.id}>
                 <div className="h-40 w-full overflow-hidden rounded-xl">
                   <img
                     src={sertif.img}
@@ -465,7 +484,8 @@ export default function Home() {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-                      className="inline-block mt-4 text-accent font-medium group-hover:underline hover:text-white" variant="ghost">
+                      className="inline-block mt-4 text-accent font-medium group-hover:underline hover:text-white"
+                      variant="ghost">
                       View More →
                     </Button>
                   </PopoverTrigger>
@@ -473,8 +493,7 @@ export default function Home() {
                   <PopoverContent
                     side="top"
                     align="center"
-                    className="w-auto max-w-none"
-                  >
+                    className="w-auto max-w-none">
                     <img
                       src={sertif.img}
                       alt="Certificate"
@@ -504,7 +523,8 @@ export default function Home() {
         id="contact">
         <div className="flex flex-col gap-5 w-full lg:w-1/2">
           <h1 className="text-4xl md:text-5xl lg:text-6xl">
-            Get in <span className="text-accent font-medium">Touch</span> with me <br />
+            Get in <span className="text-accent font-medium">Touch</span> with
+            me <br />
             and <span className="text-accent font-medium">Contact us!</span>
           </h1>
           <p className="text-lg md:text-xl font-light text-gray-300">
@@ -534,7 +554,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        
+
         <form
           className="w-full lg:w-1/2 bg-linear-to-br from-[#16C47F] to-[#0f3d2e] rounded-3xl p-6 md:p-10 flex flex-col gap-5 items-end"
           action="https://formspree.io/f/mzdralzw"
@@ -601,6 +621,9 @@ export default function Home() {
                   Projects
                 </a>
               </li>
+              <li>
+                <MusicPlayer></MusicPlayer>
+              </li>
             </ul>
           </div>
 
@@ -639,6 +662,8 @@ export default function Home() {
         <div className="border-t border-white/30 py-4 text-center text-sm opacity-80 px-4">
           © 2024 Galih Rakhasiwi. All rights reserved.
         </div>
+
+        
       </footer>
     </div>
   );
