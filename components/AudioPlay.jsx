@@ -28,7 +28,6 @@ export default function MusicPlayer() {
     // Ubah status state
     setIsPlaying(!isPlaying);
   };
-
   return (
     <button
       onClick={togglePlay}
