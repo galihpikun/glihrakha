@@ -243,7 +243,7 @@ export default function Home() {
           {/* Foto Profil */}
           <div className="shrink-0 relative">
             <img
-              className="w-[260px] h-[260px] md:w-[350px] md:h-[350px] rounded-full object-cover border-4 border-accent/30 shadow-accent shadow-[0_0_20px_rgba(var(--color-accent),0.2)] rotate-25 hover:scale-110 transition-all duration-500 hover:rotate-0 hover:shadow-2xl hover:shadow-accent/40 hover:border-accent md:blur-sm hover:blur-none"
+              className="w-[260px] h-[260px] md:w-[350px] md:h-[350px] rounded-full object-cover border-4 border-accent/30 shadow-accent shadow-[0_0_20px_rgba(var(--color-accent),0.2)] md:rotate-25 hover:scale-110 transition-all duration-500 md:hover:rotate-0 hover:shadow-2xl hover:shadow-accent/40 hover:border-accent md:blur-sm hover:blur-none"
               src="/images/lubac.jpeg"
               alt="Galih Rakhasiwi"
             />
