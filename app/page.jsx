@@ -54,7 +54,7 @@ export default function Home() {
       title: "Food Rescue",
       description:
         "Sebuah web yang berfungsi sebagai sarana penjual untuk menjual makanan yang sudah tidak layak jual, tetapi masih layak konsumsi. Web ini memiliki fitur untuk menampilkan produk yang dijual, dan juga fitur untuk menambahkan produk baru.",
-      image: "/images/komune.png",
+      image: "/images/food-rescue.png",
       link: "https://github.com/RezaAdityaRamadhan26/food-rescue-fe",
       tags: ["Next.Js", "Express.Js", "Prisma"],
     },
