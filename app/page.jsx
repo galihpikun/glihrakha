@@ -591,9 +591,10 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-around items-start gap-10 p-6 md:p-10 lg:p-14">
           <div className="max-w-md">
             <h1 className="text-3xl md:text-4xl font-light">Galih Rakhasiwi</h1>
+            
             <p className="mt-2 text-sm md:text-base opacity-80 leading-relaxed">
               Seorang Murid SMK Pemrograman yang berfokus di Web Developing dan
-              Database Management. Saya bertujuan untuk inian anuan biar kalo
+              Database Management. Saya bertujuan untuk inian anuan biar kalo <Link href="/images/vibe.jpeg">click </Link>
               anu ininya ga anuan, biar jadinya nya jadi begini bukan begitu.
             </p>
           </div>
