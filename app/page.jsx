@@ -22,12 +22,12 @@ export default function Home() {
   const projectsData = [
     {
       id: 1,
-      title: "Web Perpustakaan Sims",
+      title: "SnipSnip (Web Snippet)",
       description:
-        "Web Peminjaman buku sederhana menggunakan React untuk frontend dan menggunakan MySQL Sebagai Database. Fitur termasuk autentikasi pengguna, manajemen koleksi buku, dan sistem peminjaman.",
-      image: "/images/perpus.png",
-      link: "https://github.com/galihpikun/Projek-AAS-Kelas-11-Perpustakaan-Sekolah",
-      tags: ["Next.Js", "MySql2", "NextAuth"],
+        "Sebuah web yang berfungsi untuk menyimpan dan berbagi snippet kode. Di website ini anda dapat menyimpan rangkaian kode yang anda buat dan membagikannya kepada orang lain.",
+      image: "/images/snipsnip.png",
+      link: "https://snipsnip-three.vercel.app/",
+      tags: ["Next.Js", "Express.Js", "Prisma"],
     },
     {
       id: 2,
@@ -58,12 +58,12 @@ export default function Home() {
     },
     {
       id: 5,
-      title: "SnipSnip (Web Snippet)",
+      title: "Web Perpustakaan Sims",
       description:
-        "Sebuah web yang berfungsi untuk menyimpan dan berbagi snippet kode. Di website ini anda dapat menyimpan rangkaian kode yang anda buat dan membagikannya kepada orang lain.",
-      image: "/images/komune.png",
-      link: "https://github.com/galihpikun/SnipSnip",
-      tags: ["Next.Js", "Express.Js", "Prisma"],
+        "Web Peminjaman buku sederhana menggunakan React untuk frontend dan menggunakan MySQL Sebagai Database. Fitur termasuk autentikasi pengguna, manajemen koleksi buku, dan sistem peminjaman.",
+      image: "/images/perpus.png",
+      link: "https://github.com/galihpikun/Projek-AAS-Kelas-11-Perpustakaan-Sekolah",
+      tags: ["Next.Js", "MySql2", "NextAuth"],
     },
   ];
 
@@ -252,7 +252,7 @@ export default function Home() {
                 <div className="flex justify-between items-center font-mono text-xs md:text-sm">
                   <span className="text-gray-400">Age</span>
                   <span className="text-white font-medium text-right">
-                    16 Years Old
+                    17 Years Old
                   </span>
                 </div>
               </div>
@@ -305,16 +305,15 @@ export default function Home() {
                   <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
                     DISCIPLINE & AMBITION
                   </span>
-                  <span className="font-mono text-xs text-accent/50">01</span>
+                  <span className="font-mono text-xs text-accent/50">69</span>
                 </div>
 
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
-                  Building for tomorrow's software standard.
+                  Being an international Pimp.
                 </h3>
 
                 <p className="text-sm font-mono text-gray-400 leading-relaxed">
-                  Dedicated to mastering engineering primitives: resilient
-                  servers, performant client systems, and fluid ergonomics.
+                  Dedicated to mastering the art of pimping and being a baller that knows no bound, On dat Agent Zero Shi.
                 </p>
               </div>
 
@@ -441,6 +440,10 @@ export default function Home() {
                   fluid interactive client interfaces using{" "}
                   <span className="text-white font-medium border-b border-accent/40">
                     React
+                  </span>
+                  ,{" "}
+                  <span className="text-white font-medium border-b border-accent/40">
+                    Nest
                   </span>
                   ,{" "}
                   <span className="text-white font-medium border-b border-accent/40">
@@ -761,7 +764,7 @@ export default function Home() {
                   <Popover>
                     <PopoverTrigger asChild>
                       <button
-                        className="font-mono text-xs text-gray-400 hover:text-white hover:underline flex items-center gap-1.5 transition-colors"
+                        className="font-mono text-xs text-gray-400 hover:text-white hover:underline flex items-center gap-1.5 transition-colors cursor-pointer"
                         type="button">
                         <span>View Certificate</span>
                         <span className="text-accent">↗</span>
