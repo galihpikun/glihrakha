@@ -31,6 +31,14 @@ const AnimatedContent = ({
     const el = ref.current;
     if (!el) return;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      el.style.visibility = 'visible';
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      return;
+    }
+
     let scrollerTarget = container || document.getElementById('snap-main-container') || null;
 
     if (typeof scrollerTarget === 'string') {

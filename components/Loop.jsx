@@ -22,21 +22,29 @@ const techLogos = [
 
 export default function Loop() {
   return (
-    <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
-      {/* Basic horizontal loop */}
-      <LogoLoop
-        logos={techLogos}
-        speed={100}
-        direction="left"
-        logoHeight={60}
-        gap={60}
-        hoverSpeed={0}
-        scaleOnHover
-        fadeOut
-        fadeOutColor="#16C47F"
-        ariaLabel="Technology partners"
-      />
-      
+    <div className="relative py-4 overflow-hidden w-full">
+      <div className="max-w-7xl mx-auto px-6 mb-3 flex items-center justify-between">
+        <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400/80">
+          {"// Tooling & Technologies"}
+        </span>
+        <span className="font-mono text-[10px] text-accent/80 hidden sm:inline">
+          Continuous Integration • 2026
+        </span>
+      </div>
+      <div className="relative h-[90px] flex items-center overflow-hidden">
+        <LogoLoop
+          logos={techLogos}
+          speed={60}
+          direction="left"
+          logoHeight={42}
+          gap={54}
+          hoverSpeed={15}
+          scaleOnHover
+          fadeOut
+          fadeOutColor="#0f172a"
+          ariaLabel="Technologies and developer tools"
+        />
+      </div>
     </div>
   );
 }
