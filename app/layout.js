@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,11 +19,36 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('portfolio-theme');
+                  var theme = (saved === 'light' || saved === 'dark') ? saved : 'dark';
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    document.documentElement.style.colorScheme = 'dark';
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
+                    document.documentElement.style.colorScheme = 'light';
+                  }
+                } catch (e) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#0f172a] text-white antialiased selection:bg-[#16C47F] selection:text-slate-950`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-[#16C47F] selection:text-slate-950 transition-colors duration-300`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
