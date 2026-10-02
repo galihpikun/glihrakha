@@ -126,3 +126,16 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+.no-scrollbar,
+.experience-track {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.experience-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
+}
