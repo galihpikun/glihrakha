@@ -1,7 +1,8 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { Download, Film, Disc3, Gamepad2 } from "lucide-react";
+import { Download } from "lucide-react";
+import PopCultureSection from "@/components/pop-culture/PopCultureSection";
 
 const AnimatedContent = dynamic(() => import("@/components/AnimatedContent"), {
   ssr: false,
@@ -144,76 +145,7 @@ export default function AboutSection() {
               </div>
 
               {/* FAVORITES SECTION (Movies, Albums, Anime/Games) */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {/* Favorite Movies */}
-                <div className="bg-white dark:bg-[#0d1527]/60 border border-slate-200 dark:border-white/10 rounded-xl p-4 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/40 shadow-sm">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono text-accent uppercase tracking-wider flex items-center gap-1.5 font-semibold">
-                      <Film className="w-3 h-3" />
-                      <span>Movies</span>
-                    </span>
-                    <span className="text-[9px] font-mono text-slate-400 dark:text-gray-500">
-                      CINEMA
-                    </span>
-                  </div>
-                  <ul className="text-xs text-slate-600 dark:text-gray-300 space-y-1.5 font-light">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent" />
-                      <span>The Batman - Matt Reeves</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent" />
-                      <span>Crows Zero - Takashi Miike</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Favorite Albums */}
-                <div className="bg-white dark:bg-[#0d1527]/60 border border-slate-200 dark:border-white/10 rounded-xl p-4 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/40 shadow-sm">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono text-accent uppercase tracking-wider flex items-center gap-1.5 font-semibold">
-                      <Disc3 className="w-3 h-3" />
-                      <span>Albums</span>
-                    </span>
-                    <span className="text-[9px] font-mono text-slate-400 dark:text-gray-500">
-                      AUDIO
-                    </span>
-                  </div>
-                  <ul className="text-xs text-slate-600 dark:text-gray-300 space-y-1.5 font-light">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent" />
-                      <span>Grace - Jeff Buckley</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent" />
-                      <span>Ideologi Sikap Otak - Ahmad Band</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Favorite Anime/Games */}
-                <div className="bg-white dark:bg-[#0d1527]/60 border border-slate-200 dark:border-white/10 rounded-xl p-4 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/40 shadow-sm">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono text-accent uppercase tracking-wider flex items-center gap-1.5 font-semibold">
-                      <Gamepad2 className="w-3 h-3" />
-                      <span>Anime & Games</span>
-                    </span>
-                    <span className="text-[9px] font-mono text-slate-400 dark:text-gray-500">
-                      PLAY
-                    </span>
-                  </div>
-                  <ul className="text-xs text-slate-600 dark:text-gray-300 space-y-1.5 font-light">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent" />
-                      <span>Devil May Cry 4</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent" />
-                      <span>Initial D</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <PopCultureSection />
             </div>
           </div>
         </div>
